@@ -8,6 +8,10 @@
 		content="Portfolio di Matteo Cappelli: sviluppo web, piattaforme gestionali, integrazioni e prodotti digitali." />
 	<meta name="theme-color" content="#f2f0e8" />
 	<title>Matteo Cappelli</title>
+	<link rel="canonical" href="https://devacap.github.io/" />
+	<link rel="alternate" hreflang="it" href="https://devacap.github.io/" />
+	<link rel="alternate" hreflang="en" href="https://devacap.github.io/en/" />
+	<link rel="alternate" hreflang="x-default" href="https://devacap.github.io/" />
 	<link rel="icon" href="public/img/logo.svg" type="image/svg+xml" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,12 +20,15 @@
 		rel="stylesheet" />
 	<link rel="stylesheet" href="public/css/style.css" />
 	<script src="public/js/app.js" defer></script>
+	<script src="public/js/carousel.js" defer></script>
+
 </head>
+
 
 <body>
 	<div class="page-shell">
 		<header class="site-header" data-header>
-			<a class="brand" href="#top" aria-label="Matteo Cappelli, torna all'inizio">
+			<a class="brand" href="#top" aria-label="Matteo Cappelli, torna all&#39;inizio">
 				<span class="brand-mark"><img src="public/img/logo.svg" alt="" width="42" height="42" /></span>
 				<span>Matteo Cappelli</span>
 			</a>
@@ -32,9 +39,10 @@
 			<div id="main-navigation" class="header-navigation" data-nav>
 				<nav class="site-nav" aria-label="Navigazione principale">
 					<a href="#about">About</a><a href="#skills">Skills</a><a href="#progetti">Progetti</a><a
-						href="#cv">CV</a><a href="#contatti">Contatti</a>
+						href="#cv">CV</a><a href="servizi.html">Servizi</a><a href="#contatti">Contatti</a>
 				</nav>
 				<span class="header-divider" aria-hidden="true"></span>
+				<div class="header-utilities">
 				<nav class="header-socials" aria-label="Profili social">
 					<a href="https://www.linkedin.com/in/matte-cappe" target="_blank" rel="noopener noreferrer"
 						aria-label="LinkedIn"><span class="header-social-icon social-linkedin" aria-hidden="true"><svg
@@ -44,8 +52,13 @@
 									d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V8.99h3.42v1.57h.05c.47-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.37 4.27 5.46v6.28ZM5.32 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.54V8.99H7.1v11.46Z" />
 							</svg></span></a>
 				</nav>
+				<nav class="language-switcher" aria-label="Seleziona lingua">
+					<a href="en/" lang="en" hreflang="en" aria-label="English" title="English" data-language-link><img src="public/img/flag-gb.svg" alt="" width="21" height="14" /></a>
+				</nav>
+				</div>
 			</div>
 		</header>
+
 
 		<main id="top">
 			<section class="hero" aria-labelledby="hero-title">
@@ -72,16 +85,10 @@
 					<h2 id="about-title">About me</h2>
 				</div>
 				<div class="about-grid">
-					<p class="about-lead">Trasformo bisogni complessi in software semplici da usare, mantenere e
-						migliorare.</p>
+					<p class="about-lead">Trasformo bisogni complessi in software semplici da usare, mantenere e migliorare.</p>
 					<div class="about-copy">
-						<p>Sono Matteo, programmatore full-stack con esperienza su gestionali, siti web, e-commerce e
-							sistemi di integrazione. Posso lavorare sia sul back-end che sul front-end. Prediligo un
-							approccio pragmatico di fronte alle sfide: capire bene il problema, dare una struttura alle
-							informazioni raccolte e scrivere una soluzione efficace.</p>
-						<p>Negli anni ho lavorato su contesti molto diversi, dal turismo alla formazione, dalle
-							operations al controllo economico. Ho imparato che la qualità del software nasce tanto dal
-							codice quanto dall'ascolto.</p>
+						<p>Sono Matteo, programmatore full-stack con esperienza su gestionali, siti web, e-commerce e sistemi di integrazione. Posso lavorare sia sul back-end che sul front-end. Prediligo un approccio pragmatico di fronte alle sfide: capire bene il problema, dare una struttura alle informazioni raccolte e scrivere una soluzione efficace.</p>
+						<p>Negli anni ho lavorato su contesti molto diversi, dal turismo alla formazione, dalle operations al controllo economico. Ho imparato che la qualità del software nasce tanto dal codice quanto dall&#39;ascolto.</p>
 					</div>
 				</div>
 			</section>
@@ -93,8 +100,7 @@
 					</div>
 				</div>
 				<div class="skills-intro reveal">
-					<p>Prima ti mostro il modo in cui lavoro, poi gli strumenti con cui lo faccio. Perché una soluzione
-						tecnicamente perfetta ma incomprensibile resta comunque un problema ben compilato.</p>
+					<p>Prima ti mostro il modo in cui lavoro, poi gli strumenti con cui lo faccio. Perché una soluzione tecnicamente perfetta ma incomprensibile resta comunque un problema ben compilato.</p>
 				</div>
 
 				<div class="skill-group skill-group-soft reveal">
@@ -279,236 +285,222 @@
 					</div>
 				</div>
 				<div class="project-overview reveal">
-					<p class="project-disclaimer">Metto in evidenza ciò che ho contribuito a costruire, preservando la
-						privacy dei clienti.</p>
+					<p class="project-disclaimer">Metto in evidenza ciò che ho contribuito a costruire, preservando la privacy dei clienti.</p>
 				</div>
 
-				<div class="micro-grid">
-					<article class="micro-card micro-card-accent reveal">
-						<figure class="micro-media"><img src="public/img/project-vialenta.webp"
-								alt="Strada costiera tra colline e mare al tramonto" loading="lazy" />
-						</figure>
-						<div class="micro-body">
-							<p class="micro-meta">Travel · Web platform</p>
-							<h3>Vialenta</h3>
-							<p>Piattaforma per scoprire, fruire e personalizzare viaggi esperienziali.</p>
-							<p class="micro-value"><span>Il mio contributo</span>SEO, analytics ed eventi, pannello
-								back-office, scrittura del front-end.</p>
-							<ul>
-								<li>Symfony</li>
-								<li>HTML, JS, CSS</li>
-								<li>SEO</li>
-								<li>Analytics</li>
-							</ul>
+				<div class="project-carousel" data-project-carousel
+					role="group" aria-roledescription="carosello" aria-label="Progetti"
+					data-carousel-range="Progetti {start}–{end} di {total}" data-carousel-single="Progetto {start} di {total}">
+					<div id="project-track" class="micro-grid" data-carousel-track tabindex="0" aria-label="Elenco progetti: usa le frecce per scorrere">
+						<article class="micro-card" data-project="vialenta" id="project-vialenta" aria-labelledby="project-vialenta-title">
+							<figure class="micro-media">
+								<img src="public/img/project-vialenta.webp" alt="Strada costiera tra colline e mare al tramonto" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">Travel · Web platform</p>
+								<h3 id="project-vialenta-title">Vialenta</h3>
+								<p>Piattaforma per scoprire, fruire e personalizzare viaggi esperienziali.</p>
+								<p class="micro-value"><span>Il mio contributo</span>SEO, analytics ed eventi, pannello back-office, scrittura del front-end.</p>
+								<ul aria-label="Tecnologie">
+									<li>Symfony</li>
+									<li>HTML, JS, CSS</li>
+									<li>SEO</li>
+									<li>Analytics</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="tourpilot" id="project-tourpilot" aria-labelledby="project-tourpilot-title">
+							<figure class="micro-media">
+								<img src="public/img/project-tourpilot.webp" alt="Mappa di viaggio in miniatura con tappe, strutture e percorsi coordinati" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">Travel · Operations</p>
+								<h3 id="project-tourpilot-title">TourPilot</h3>
+								<p>Gestionale operativo per prenotazioni, preventivi, planner, listini e canali turistici.</p>
+								<p class="micro-value"><span>Il mio contributo</span>Integrazioni multi-canale (WEB, GetYourGuide, Viator, TourCMS), sincronizzazione listini, pannello back-office, flussi di prenotazione e scrittura del front-end.</p>
+								<ul aria-label="Tecnologie">
+									<li>Symfony</li>
+									<li>HTML, JS, CSS</li>
+									<li>API</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="stockroom" id="project-stockroom" aria-labelledby="project-stockroom-title">
+							<figure class="micro-media">
+								<img src="public/img/project-stockroom.webp" alt="Scaffali e moduli di magazzino collegati a un nodo logistico" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">Commerce</p>
+								<h3 id="project-stockroom-title">Stockroom</h3>
+								<p>Gestione vendite, magazzini, promozioni, resi, note di credito.</p>
+								<p class="micro-value"><span>Il mio contributo</span>Pannello back-office e scrittura delle API per interfacciare il front-end.</p>
+								<ul aria-label="Tecnologie">
+									<li>Symfony</li>
+									<li>API</li>
+									<li>DDD</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="bridgebase" id="project-bridgebase" aria-labelledby="project-bridgebase-title">
+							<figure class="micro-media">
+								<img src="public/img/project-nodo.webp" alt="Moduli e-commerce collegati da un ponte centrale verde" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">Middleware · Integration</p>
+								<h3 id="project-bridgebase-title">BridgeBase</h3>
+								<p>Middleware per aggiornamento massivo di più siti e-commerce (PrestaShop, Shopify e WooCommerce).</p>
+								<p class="micro-value"><span>Il mio contributo</span>Lettura dati dei prodotti da più sorgenti e scrittura/sincronizzazione degli stessi tra i diversi e-commerce in maniera massiva e automatizzata.</p>
+								<ul aria-label="Tecnologie">
+									<li>Symfony</li>
+									<li>API</li>
+									<li>E-commerce</li>
+									<li>PrestaShop</li>
+									<li>Shopify</li>
+									<li>WordPress, WooCommerce</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="margine" id="project-margine" aria-labelledby="project-margine-title">
+							<figure class="micro-media">
+								<img src="public/img/project-margine.webp" alt="Scrivania con grafici astratti, taccuino e calcolatrice" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">Finance · Business intelligence</p>
+								<h3 id="project-margine-title">Margine</h3>
+								<p>Controllo di gestione per costi, ricavi, fatture, dipendenti e analisi periodiche per le strutture alberghiere.</p>
+								<p class="micro-value"><span>Il mio contributo</span>Pannello back-office, scrittura del back-end, importazioni dati, analisi e reportistiche</p>
+								<ul aria-label="Tecnologie">
+									<li>Symfony</li>
+									<li>Reporting</li>
+									<li>Importazioni</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="quota" id="project-quota" aria-labelledby="project-quota-title">
+							<figure class="micro-media">
+								<img src="public/img/project-quota.webp" alt="Composizione editoriale con registro, grafici e monete" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">Fintech · Investments</p>
+								<h3 id="project-quota-title">Quota</h3>
+								<p>Gestione di soci, investimenti, progetti, interessi e rimborsi progressivi.</p>
+								<p class="micro-value"><span>Il mio contributo</span>Calcoli economici e arrotondamenti, interessi pagati, storico, rimborsi progressivi e comunicazioni ai soci.</p>
+								<ul aria-label="Tecnologie">
+									<li>Symfony</li>
+									<li>Calculations</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="skillario" id="project-skillario" aria-labelledby="project-skillario-title">
+							<figure class="micro-media">
+								<img src="public/img/project-skillario.webp" alt="Tavolo didattico con schede, moduli colorati e attestato" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">E-Learning</p>
+								<h3 id="project-skillario-title">Skillario</h3>
+								<p>Ambiente digitale per corsi, quiz, attività, certificazioni e percorsi professionali.</p>
+								<p class="micro-value"><span>Il mio contributo</span>Logiche di fruizione ECM, report multi-questionario, generazione attestati, export e gestione fine corso. Scrittura del back-end e front-end.</p>
+								<ul aria-label="Tecnologie">
+									<li>Symfony</li>
+									<li>HTML, JS, CSS</li>
+									<li>API</li>
+									<li>Reporting</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="flotta" id="project-flotta" aria-labelledby="project-flotta-title">
+							<figure class="micro-media">
+								<img src="public/img/project-flotta.webp" alt="Veicoli in miniatura coordinati su una rete di percorsi operativi" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">Mobility · Operations</p>
+								<h3 id="project-flotta-title">Flotta</h3>
+								<p>Gestionale per mezzi, autisti NCC, servizi, assegnazioni e documentazione operativa.</p>
+								<p class="micro-value"><span>Il mio contributo</span>Gestione fatture, autisti, calendari, mezzi, costi, ricavi, API per interfacciare il front-end. Scrittura del back-office.</p>
+								<ul aria-label="Tecnologie">
+									<li>Symfony</li>
+									<li>API</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="gofood" id="project-gofood" aria-labelledby="project-gofood-title">
+							<figure class="micro-media">
+								<img src="public/img/project-fornogo.webp" alt="Pane, confezioni e indicatori di consegna disposti su un piano operativo" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">Food commerce · Delivery</p>
+								<h3 id="project-gofood-title">GoFood</h3>
+								<p>Ordini online con prodotti, varianti, coupon, pagamenti, ritiro e consegna.</p>
+								<p class="micro-value"><span>Il mio contributo</span>Assegnazione rider, controllo sovrapposizioni e slot, sconti, API e documenti ordine.</p>
+								<ul aria-label="Tecnologie">
+									<li>Symfony</li>
+									<li>React</li>
+									<li>API</li>
+									<li>E-commerce</li>
+									<li>Scheduling</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="deskline" id="project-deskline" aria-labelledby="project-deskline-title">
+							<figure class="micro-media">
+								<img src="public/img/project-deskline.webp" alt="Modello di edificio moderno su un progetto architettonico" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">Management · Energy</p>
+								<h3 id="project-deskline-title">Deskline</h3>
+								<p>Gestione di commesse, edifici, contatori, utenze, documenti e comunicazioni.</p>
+								<p class="micro-value"><span>Il mio contributo</span>Gestione commesse con interventi ordinari e straordinari, chat, filtri territoriali, grafici, export e import fatture con aggiornamento crediti.</p>
+								<ul aria-label="Tecnologie">
+									<li>Symfony</li>
+									<li>HTML, JS, CSS</li>
+									<li>Chat</li>
+									<li>Charts</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="mineralandia" id="project-mineralandia" aria-labelledby="project-mineralandia-title">
+							<figure class="micro-media">
+								<img src="public/img/project-mineralia.webp" alt="Collezione di minerali catalogata in un vassoio di legno" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">Vertical SaaS · Catalog</p>
+								<h3 id="project-mineralandia-title">Mineralandia</h3>
+								<p>Catalogo specialistico di minerali, classi, documenti e collezioni personali.</p>
+								<p class="micro-value"><span>Il mio contributo</span>Pannello back-office, upload documentale, stampe PDF e consolidamento delle impostazioni. Networking tra collezionisti.</p>
+								<ul aria-label="Tecnologie">
+									<li>Symfony</li>
+									<li>Reporting</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="elica" id="project-elica" aria-labelledby="project-elica-title">
+							<figure class="micro-media">
+								<img class="image-focus-top" src="public/img/project-elica.webp" alt="Modello di turbina eolica con cuscinetti e componenti meccanici" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">E-commerce · Energy</p>
+								<h3 id="project-elica-title">Elica</h3>
+								<p>Vendita e scambio di pezzi di ricambio per impianti eolici.</p>
+								<p class="micro-value"><span>Il mio contributo</span>Pannello back-office, inserimento prodotti, incontro digitale tra acquirenti e venditori.</p>
+								<ul aria-label="Tecnologie">
+									<li>Symfony</li>
+									<li>HTML, JS, CSS</li>
+								</ul>
+							</div>
+						</article>
+					</div>
+					<div class="project-carousel-controls" data-carousel-controls hidden>
+						<div class="project-carousel-pages" data-carousel-pages role="group" aria-label="Pagine dei progetti"></div>
+						<div class="project-carousel-navigation">
+							<p class="project-carousel-status" data-carousel-status role="status" aria-live="polite" aria-atomic="true"></p>
+							<button class="project-carousel-arrow" type="button" data-carousel-prev aria-controls="project-track" aria-label="Progetti precedenti">
+								<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6" /></svg>
+							</button>
+							<button class="project-carousel-arrow" type="button" data-carousel-next aria-controls="project-track" aria-label="Progetti successivi">
+								<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6" /></svg>
+							</button>
 						</div>
-					</article>
-
-					<article class="micro-card reveal">
-						<figure class="micro-media"><img src="public/img/project-tourpilot.webp"
-								alt="Mappa di viaggio in miniatura con tappe, strutture e percorsi coordinati"
-								loading="lazy" /></figure>
-						<div class="micro-body">
-							<p class="micro-meta">Travel · Operations</p>
-							<h3>TourPilot</h3>
-							<p>Gestionale operativo per prenotazioni, preventivi, planner, listini e canali turistici.
-							</p>
-							<p class="micro-value"><span>Il mio contributo</span>Integrazioni multi-canale (WEB,
-								GetYourGuide, Viator, TourCMS), sincronizzazione listini, pannello back-office, flussi
-								di prenotazione e scrittura del front-end.
-							</p>
-							<ul>
-								<li>Symfony</li>
-								<li>HTML, JS, CSS</li>
-								<li>API</li>
-							</ul>
-						</div>
-					</article>
-
-					<article class="micro-card reveal">
-						<figure class="micro-media"><img src="public/img/project-stockroom.webp"
-								alt="Scaffali e moduli di magazzino collegati a un nodo logistico" loading="lazy" />
-						</figure>
-						<div class="micro-body">
-							<p class="micro-meta">Commerce</p>
-							<h3>Stockroom</h3>
-							<p>Gestione vendite, magazzini, promozioni, resi, note di credito.</p>
-							<p class="micro-value"><span>Il mio contributo</span>Pannello back-office e scrittura delle
-								API per interfacciare il front-end.</p>
-							<ul>
-								<li>Symfony</li>
-								<li>API</li>
-								<li>DDD</li>
-							</ul>
-						</div>
-					</article>
-
-					<article class="micro-card reveal">
-						<figure class="micro-media"><img src="public/img/project-nodo.webp"
-								alt="Moduli e-commerce collegati da un ponte centrale verde" loading="lazy" /></figure>
-						<div class="micro-body">
-							<p class="micro-meta">Middleware · Integration</p>
-							<h3>BridgeBase</h3>
-							<p>Middleware per aggiornamento massivo di più siti e-commerce (PrestaShop, Shopify e
-								WooCommerce).</p>
-							<p class="micro-value"><span>Il mio contributo</span>Lettura dati dei prodotti da più
-								sorgenti e scrittura/sincronizzazione degli stessi tra i diversi e-commerce in maniera
-								massiva e automatizzata.</p>
-							<ul>
-								<li>Symfony</li>
-								<li>API</li>
-								<li>E-commerce</li>
-								<li>PrestaShop</li>
-								<li>Shopify</li>
-								<li>WordPress, WooCommerce</li>
-							</ul>
-						</div>
-					</article>
-
-					<article class="micro-card reveal">
-						<figure class="micro-media"><img src="public/img/project-margine.webp"
-								alt="Scrivania con grafici astratti, taccuino e calcolatrice" loading="lazy" /></figure>
-						<div class="micro-body">
-							<p class="micro-meta">Finance · Business intelligence</p>
-							<h3>Margine</h3>
-							<p>Controllo di gestione per costi, ricavi, fatture, dipendenti e analisi periodiche per le
-								strutture alberghiere.</p>
-							<p class="micro-value"><span>Il mio contributo</span>Pannello back-office, scrittura del
-								back-end, importazioni dati, analisi e reportistiche</p>
-							<ul>
-								<li>Symfony</li>
-								<li>Reporting</li>
-								<li>Importazioni</li>
-							</ul>
-						</div>
-					</article>
-
-					<article class="micro-card reveal">
-						<figure class="micro-media"><img src="public/img/project-quota.webp"
-								alt="Composizione editoriale con registro, grafici e monete" loading="lazy" /></figure>
-						<div class="micro-body">
-							<p class="micro-meta">Fintech · Investments</p>
-							<h3>Quota</h3>
-							<p>Gestione di soci, investimenti, progetti, interessi e rimborsi progressivi.</p>
-							<p class="micro-value"><span>Il mio contributo</span>Calcoli economici e arrotondamenti,
-								interessi pagati, storico, rimborsi progressivi e comunicazioni ai soci.</p>
-							<ul>
-								<li>Symfony</li>
-								<li>Calculations</li>
-							</ul>
-						</div>
-					</article>
-
-					<article class="micro-card reveal">
-						<figure class="micro-media"><img src="public/img/project-skillario.webp"
-								alt="Tavolo didattico con schede, moduli colorati e attestato" loading="lazy" />
-						</figure>
-						<div class="micro-body">
-							<p class="micro-meta">E-Learning</p>
-							<h3>Skillario</h3>
-							<p>Ambiente digitale per corsi, quiz, attività, certificazioni e percorsi professionali.</p>
-							<p class="micro-value"><span>Il mio contributo</span>Logiche di fruizione ECM, report
-								multi-questionario, generazione attestati, export e gestione fine corso. Scrittura del
-								back-end e front-end.</p>
-							<ul>
-								<li>Symfony</li>
-								<li>HTML, JS, CSS</li>
-								<li>API</li>
-								<li>Reporting</li>
-							</ul>
-						</div>
-					</article>
-
-					<article class="micro-card reveal">
-						<figure class="micro-media"><img src="public/img/project-flotta.webp"
-								alt="Veicoli in miniatura coordinati su una rete di percorsi operativi"
-								loading="lazy" /></figure>
-						<div class="micro-body">
-							<p class="micro-meta">Mobility · Operations</p>
-							<h3>Flotta</h3>
-							<p>Gestionale per mezzi, autisti NCC, servizi, assegnazioni e documentazione operativa.</p>
-							<p class="micro-value"><span>Il mio contributo</span>Gestione fatture, autisti, calendari,
-								mezzi, costi, ricavi, API per interfacciare il front-end. Scrittura del back-office.</p>
-							<ul>
-								<li>Symfony</li>
-								<li>API</li>
-							</ul>
-						</div>
-					</article>
-
-					<article class="micro-card reveal">
-						<figure class="micro-media"><img src="public/img/project-fornogo.webp"
-								alt="Pane, confezioni e indicatori di consegna disposti su un piano operativo"
-								loading="lazy" /></figure>
-						<div class="micro-body">
-							<p class="micro-meta">Food commerce · Delivery</p>
-							<h3>GoFood</h3>
-							<p>Ordini online con prodotti, varianti, coupon, pagamenti, ritiro e consegna.</p>
-							<p class="micro-value"><span>Il mio contributo</span>Assegnazione rider, controllo
-								sovrapposizioni e slot, sconti, API e documenti ordine.</p>
-							<ul>
-								<li>Symfony</li>
-								<li>React</li>
-								<li>API</li>
-								<li>E-commerce</li>
-								<li>Scheduling</li>
-							</ul>
-						</div>
-					</article>
-
-					<article class="micro-card reveal">
-						<figure class="micro-media"><img src="public/img/project-deskline.webp"
-								alt="Modello di edificio moderno su un progetto architettonico" loading="lazy" />
-						</figure>
-						<div class="micro-body">
-							<p class="micro-meta">Management · Energy</p>
-							<h3>Deskline</h3>
-							<p>Gestione di commesse, edifici, contatori, utenze, documenti e comunicazioni.</p>
-							<p class="micro-value"><span>Il mio contributo</span>Gestione commesse con interventi
-								ordinari e straordinari, chat, filtri territoriali, grafici, export e import fatture con
-								aggiornamento crediti.</p>
-							<ul>
-								<li>Symfony</li>
-								<li>HTML, JS, CSS</li>
-								<li>Chat</li>
-								<li>Charts</li>
-							</ul>
-						</div>
-					</article>
-
-					<article class="micro-card reveal">
-						<figure class="micro-media"><img src="public/img/project-mineralia.webp"
-								alt="Collezione di minerali catalogata in un vassoio di legno" loading="lazy" />
-						</figure>
-						<div class="micro-body">
-							<p class="micro-meta">Vertical SaaS · Catalog</p>
-							<h3>Mineralandia</h3>
-							<p>Catalogo specialistico di minerali, classi, documenti e collezioni personali.</p>
-							<p class="micro-value"><span>Il mio contributo</span>Pannello back-office, upload
-								documentale, stampe PDF e consolidamento delle impostazioni. Networking tra
-								collezionisti.</p>
-							<ul>
-								<li>Symfony</li>
-								<li>Reporting</li>
-							</ul>
-						</div>
-					</article>
-
-					<article class="micro-card reveal">
-						<figure class="micro-media"><img class="image-focus-top" src="public/img/project-elica.webp"
-								alt="Modello di turbina eolica con cuscinetti e componenti meccanici" loading="lazy" />
-						</figure>
-						<div class="micro-body">
-							<p class="micro-meta">E-commerce · Energy</p>
-							<h3>Elica</h3>
-							<p>Vendita e scambio di pezzi di ricambio per impianti eolici.</p>
-							<p class="micro-value"><span>Il mio contributo</span>Pannello back-office, inserimento
-								prodotti, incontro digitale tra acquirenti e venditori.</p>
-							<ul>
-								<li>Symfony</li>
-								<li>HTML, JS, CSS</li>
-							</ul>
-						</div>
-					</article>
+					</div>
 				</div>
 			</section>
 
@@ -517,24 +509,20 @@
 					<div class="cv-copy">
 						<p class="eyebrow">Curriculum professionale</p>
 						<h2 id="cv-title">Codice, contesto<br />e responsabilità</h2>
-						<p>Il mio percorso ruota attorno allo sviluppo di software su misura: gestionali, siti web,
-							e-commerce, API e integrazioni. Non solo scrivere codice, ma capire perché serve e a chi
-							deve semplificare la giornata.</p>
+						<p>Il mio percorso ruota attorno allo sviluppo di software su misura: gestionali, siti web, e-commerce, API e integrazioni. Non solo scrivere codice, ma capire perché serve e a chi deve semplificare la giornata.</p>
 					</div>
 				</div>
 				<div class="cv-path">
 					<article><span>Oggi</span>
 						<div>
 							<h3>Programmazione full-stack</h3>
-							<p>Sviluppo ed evoluzione di piattaforme complesse, dal modello dati all'interfaccia, con
-								particolare attenzione alla solidità del backend.</p>
+							<p>Sviluppo ed evoluzione di piattaforme complesse, dal modello dati all&#39;interfaccia, con particolare attenzione alla solidità del backend.</p>
 						</div>
 					</article>
 					<article><span>Focus</span>
 						<div>
 							<h3>Prodotti e processi business</h3>
-							<p>Traduzione di flussi operativi, commerciali e amministrativi in strumenti digitali
-								chiari, misurabili e mantenibili.</p>
+							<p>Traduzione di flussi operativi, commerciali e amministrativi in strumenti digitali chiari, misurabili e mantenibili.</p>
 						</div>
 					</article>
 					<article><span>Metodo</span>
@@ -550,11 +538,9 @@
 						<h3>Il mio percorso completo,<br />in un documento.</h3>
 					</div>
 					<div class="cv-actions">
-						<a class="button" href="public/files/MATTEO CAPPELLI CV.pdf" target="_blank" download><span>CV
-								italiano</span><strong>Scarica ↓</strong></a>
+						<a class="button" href="public/files/MATTEO CAPPELLI CV.pdf" target="_blank" download><span>CV italiano</span><strong>Scarica ↓</strong></a>
 						<a class="button" href="public/files/MATTEO CAPPELLI CV EN.pdf" target="_blank"
-							download><span>CV
-								English</span><strong>Download ↓</strong></a>
+							download><span>CV English</span><strong>Download ↓</strong></a>
 					</div>
 				</div>
 			</section>
@@ -579,6 +565,11 @@
 					</nav>
 				</div>
 				<form action="https://api.web3forms.com/submit" method="POST" class="contact-form" data-contact-form
+					data-message-required="Completa i campi richiesti per continuare."
+					data-message-sending="Invio in corso..."
+					data-message-success="Grazie! La tua richiesta è stata inviata."
+					data-message-error="Ops! C&#39;è stato un problema. Riprova."
+					data-message-network="Errore di connessione. Controlla la rete e riprova."
 					novalidate>
 					<input type="hidden" name="access_key" value="b65731ed-1a05-4930-bf30-cd3c219b2531">
 					<label><span>Nome*</span><input type="text" name="name" autocomplete="name"
@@ -587,19 +578,14 @@
 							placeholder="La tua email" required /></label>
 					<label><span>Messaggio*</span><textarea name="message" rows="5"
 							placeholder="Scrivi qui il tuo messaggio…" required></textarea></label>
-					<p class="privacy-note">Inviando il modulo dichiari di aver preso visione dell’informativa
-						sul trattamento dei dati riportata qui sotto.</p>
+					<p class="privacy-note">Inviando il modulo dichiari di aver preso visione dell’informativa sul trattamento dei dati riportata qui sotto.</p>
 					<details class="privacy-disclosure">
 						<summary>Informativa sul trattamento dei dati personali</summary>
 						<div>
 							<p><strong>Titolare:</strong> Matteo Cappelli.</p>
-							<p><strong>Dati e finalità:</strong> nome, email e contenuto del messaggio
-								saranno trattati esclusivamente per gestire e rispondere alla richiesta.</p>
-							<p><strong>Base giuridica:</strong> esecuzione di misure precontrattuali adottate su
-								richiesta dell’interessato, ai sensi dell’art. 6, par. 1, lett. b) del GDPR.</p>
-							<p><strong>Conservazione e destinatari:</strong> i dati saranno conservati per il tempo
-								necessario a gestire il contatto e gli eventuali obblighi di legge; non saranno
-								diffusi e potranno essere trattati dai fornitori tecnici del sito.</p>
+							<p><strong>Dati e finalità:</strong> nome, email e contenuto del messaggio saranno trattati esclusivamente per gestire e rispondere alla richiesta.</p>
+							<p><strong>Base giuridica:</strong> esecuzione di misure precontrattuali adottate su richiesta dell’interessato, ai sensi dell’art. 6, par. 1, lett. b) del GDPR.</p>
+							<p><strong>Conservazione e destinatari:</strong> i dati saranno conservati per il tempo necessario a gestire il contatto e gli eventuali obblighi di legge; non saranno diffusi e potranno essere trattati dai fornitori tecnici del sito.</p>
 						</div>
 					</details>
 					<div class="form-footer">
@@ -609,6 +595,7 @@
 					<p class="form-status" data-form-status role="status" aria-live="polite"></p>
 				</form>
 			</section>
+
 		</main>
 
 		<footer class="site-footer">
@@ -617,6 +604,7 @@
 			</div>
 			<a href="#top">Torna su ↑</a>
 		</footer>
+
 	</div>
 </body>
 </html>

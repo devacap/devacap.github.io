@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="{{ lang }}">
+
+{{ head }}
+
+<body class="services-page">
+	<div class="page-shell">
+{{ header }}
+
+		<main id="top">
+			<section class="services-hero" aria-labelledby="services-title">
+				<div class="services-hero-copy">
+					<p class="eyebrow">{{ services.hero.eyebrow }}</p>
+					<h1 id="services-title">{{ services.hero.first }}<br /><span>{{ services.hero.second }}</span></h1>
+					<p class="hero-intro">{{ services.hero.intro }}</p>
+					<div class="hero-actions"><a class="button button-primary" href="#contatti">{{ services.hero.cta }}</a><a class="text-link" href="./#progetti">{{ services.hero.projects }} <span aria-hidden="true">↗</span></a></div>
+				</div>
+				<nav class="services-index" aria-label="{{ services.index.label }}">
+					<a href="#service-management"><span aria-hidden="true">01</span>{{ services.management.title }}<span aria-hidden="true">↗</span></a>
+					<a href="#service-integrations"><span aria-hidden="true">02</span>{{ services.integrations.title }}<span aria-hidden="true">↗</span></a>
+					<a href="#service-commerce"><span aria-hidden="true">03</span>{{ services.commerce.title }}<span aria-hidden="true">↗</span></a>
+					<a href="#service-operations"><span aria-hidden="true">04</span>{{ services.operations.title }}<span aria-hidden="true">↗</span></a>
+					<a href="#service-data"><span aria-hidden="true">05</span>{{ services.data.title }}<span aria-hidden="true">↗</span></a>
+					<a href="#service-platforms"><span aria-hidden="true">06</span>{{ services.platforms.title }}<span aria-hidden="true">↗</span></a>
+				</nav>
+			</section>
+
+			<section class="services-catalog section-block" aria-labelledby="services-catalog-title">
+				<div class="section-heading"><p class="eyebrow">{{ services.catalog.eyebrow }}</p><h2 id="services-catalog-title">{{ services.catalog.title }}</h2><p class="services-catalog-intro">{{ services.catalog.intro }}</p></div>
+				<div class="service-list">
+					<article class="service-row" id="service-management" aria-labelledby="service-management-title">
+						<div class="service-row-heading"><span class="service-number" aria-hidden="true">01</span><h3 id="service-management-title">{{ services.management.title }}</h3></div>
+						<div class="service-row-copy">
+							<p>{{ services.management.intro }}</p>
+							<ul class="service-capabilities">
+								<li>{{ services.management.item1 }}</li>
+								<li>{{ services.management.item2 }}</li>
+								<li>{{ services.management.item3 }}</li>
+							</ul>
+						</div>
+					</article>
+					<article class="service-row" id="service-integrations" aria-labelledby="service-integrations-title">
+						<div class="service-row-heading"><span class="service-number" aria-hidden="true">02</span><h3 id="service-integrations-title">{{ services.integrations.title }}</h3></div>
+						<div class="service-row-copy">
+							<p>{{ services.integrations.intro }}</p>
+							<ul class="service-capabilities">
+								<li>{{ services.integrations.item1 }}</li>
+								<li>{{ services.integrations.item2 }}</li>
+								<li>{{ services.integrations.item3 }}</li>
+							</ul>
+						</div>
+					</article>
+					<article class="service-row" id="service-commerce" aria-labelledby="service-commerce-title">
+						<div class="service-row-heading"><span class="service-number" aria-hidden="true">03</span><h3 id="service-commerce-title">{{ services.commerce.title }}</h3></div>
+						<div class="service-row-copy">
+							<p>{{ services.commerce.intro }}</p>
+							<ul class="service-capabilities">
+								<li>{{ services.commerce.item1 }}</li>
+								<li>{{ services.commerce.item2 }}</li>
+								<li>{{ services.commerce.item3 }}</li>
+								<li>{{ services.commerce.item4 }}</li>
+							</ul>
+						</div>
+					</article>
+					<article class="service-row" id="service-operations" aria-labelledby="service-operations-title">
+						<div class="service-row-heading"><span class="service-number" aria-hidden="true">04</span><h3 id="service-operations-title">{{ services.operations.title }}</h3></div>
+						<div class="service-row-copy">
+							<p>{{ services.operations.intro }}</p>
+							<ul class="service-capabilities">
+								<li>{{ services.operations.item1 }}</li>
+								<li>{{ services.operations.item2 }}</li>
+								<li>{{ services.operations.item3 }}</li>
+							</ul>
+						</div>
+					</article>
+					<article class="service-row" id="service-data" aria-labelledby="service-data-title">
+						<div class="service-row-heading"><span class="service-number" aria-hidden="true">05</span><h3 id="service-data-title">{{ services.data.title }}</h3></div>
+						<div class="service-row-copy">
+							<p>{{ services.data.intro }}</p>
+							<ul class="service-capabilities">
+								<li>{{ services.data.item1 }}</li>
+								<li>{{ services.data.item2 }}</li>
+								<li>{{ services.data.item3 }}</li>
+							</ul>
+						</div>
+					</article>
+					<article class="service-row" id="service-platforms" aria-labelledby="service-platforms-title">
+						<div class="service-row-heading"><span class="service-number" aria-hidden="true">06</span><h3 id="service-platforms-title">{{ services.platforms.title }}</h3></div>
+						<div class="service-row-copy">
+							<p>{{ services.platforms.intro }}</p>
+							<ul class="service-capabilities">
+								<li>{{ services.platforms.item1 }}</li>
+								<li>{{ services.platforms.item2 }}</li>
+								<li>{{ services.platforms.item3 }}</li>
+							</ul>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<section class="services-existing section-block" aria-labelledby="services-existing-title">
+				<div><p class="eyebrow">{{ services.existing.eyebrow }}</p><h2 id="services-existing-title">{{ services.existing.title }}</h2></div>
+				<div class="services-existing-copy"><p>{{ services.existing.intro }}</p><ul class="service-capabilities"><li>{{ services.existing.item1 }}</li><li>{{ services.existing.item2 }}</li><li>{{ services.existing.item3 }}</li></ul></div>
+			</section>
+
+			<section class="services-method section-block" aria-labelledby="services-method-title">
+				<div class="section-heading"><p class="eyebrow">{{ services.method.eyebrow }}</p><h2 id="services-method-title">{{ services.method.title }}</h2></div>
+				<ol class="services-steps"><li><h3>{{ services.method.firstTitle }}</h3><p>{{ services.method.firstBody }}</p></li><li><h3>{{ services.method.secondTitle }}</h3><p>{{ services.method.secondBody }}</p></li><li><h3>{{ services.method.thirdTitle }}</h3><p>{{ services.method.thirdBody }}</p></li></ol>
+			</section>
+
+{{ contact }}
+		</main>
+
+{{ footer }}
+	</div>
+</body>
+</html>

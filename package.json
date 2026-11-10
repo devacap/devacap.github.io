@@ -1,0 +1,8 @@
+{
+  "name": "matteo-cappelli-portfolio",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test"
+  }
+}

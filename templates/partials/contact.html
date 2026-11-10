@@ -1,0 +1,50 @@
+			<section id="contatti" class="contact section-block reveal" aria-labelledby="contact-title">
+				<div class="contact-intro">
+					<p class="eyebrow">{{ contact.eyebrow }}</p>
+					<h2 id="contact-title">{{ contact.titleFirst }}<br /><span>{{ contact.titleSecond }}</span></h2>
+					<p>{{ contact.intro }}</p>
+					<nav class="contact-socials" aria-label="{{ header.socials }}">
+						<a href="https://www.linkedin.com/in/matte-cappe" target="_blank" rel="noopener noreferrer">
+							<span class="contact-social-mark" aria-hidden="true"><span
+									class="header-social-icon social-linkedin"><svg viewBox="0 0 24 24">
+										<rect class="linkedin-bg" x="1.5" y="1.5" width="21" height="21" rx="3.5" />
+										<path class="linkedin-glyph"
+											d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V8.99h3.42v1.57h.05c.47-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.37 4.27 5.46v6.28ZM5.32 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.54V8.99H7.1v11.46Z" />
+									</svg></span></span>
+							<span
+								class="contact-social-copy"><strong>LinkedIn</strong><small>linkedin.com/in/matte-cappe</small></span>
+							<span class="contact-social-arrow" aria-hidden="true">↗</span>
+						</a>
+					</nav>
+				</div>
+				<form action="https://api.web3forms.com/submit" method="POST" class="contact-form" data-contact-form
+					data-message-required="{{ form.required }}"
+					data-message-sending="{{ form.sending }}"
+					data-message-success="{{ form.success }}"
+					data-message-error="{{ form.error }}"
+					data-message-network="{{ form.network }}"
+					novalidate>
+					<input type="hidden" name="access_key" value="b65731ed-1a05-4930-bf30-cd3c219b2531">
+					<label><span>{{ form.name }}</span><input type="text" name="name" autocomplete="name"
+							placeholder="{{ form.namePlaceholder }}" required /></label>
+					<label><span>Email*</span><input type="email" name="email" autocomplete="email"
+							placeholder="{{ form.emailPlaceholder }}" required /></label>
+					<label><span>{{ form.message }}</span><textarea name="message" rows="5"
+							placeholder="{{ form.messagePlaceholder }}" required></textarea></label>
+					<p class="privacy-note">{{ form.privacyNote }}</p>
+					<details class="privacy-disclosure">
+						<summary>{{ privacy.summary }}</summary>
+						<div>
+							<p><strong>{{ privacy.controllerLabel }}</strong> Matteo Cappelli.</p>
+							<p><strong>{{ privacy.purposeLabel }}</strong> {{ privacy.purpose }}</p>
+							<p><strong>{{ privacy.basisLabel }}</strong> {{ privacy.basis }}</p>
+							<p><strong>{{ privacy.retentionLabel }}</strong> {{ privacy.retention }}</p>
+						</div>
+					</details>
+					<div class="form-footer">
+						<button class="button button-light" type="submit">{{ form.submit }} <span
+								aria-hidden="true">↗</span></button>
+					</div>
+					<p class="form-status" data-form-status role="status" aria-live="polite"></p>
+				</form>
+			</section>

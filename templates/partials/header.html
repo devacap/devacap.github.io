@@ -1,0 +1,31 @@
+		<header class="site-header" data-header>
+			<a class="brand" href="{{ homeUrl }}#top" aria-label="{{ header.home }}">
+				<span class="brand-mark"><img src="{{ assetPrefix }}public/img/logo.svg" alt="" width="42" height="42" /></span>
+				<span>Matteo Cappelli</span>
+			</a>
+			<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation"
+				data-menu-toggle>
+				<span class="sr-only">{{ header.menu }}</span><span></span><span></span>
+			</button>
+			<div id="main-navigation" class="header-navigation" data-nav>
+				<nav class="site-nav" aria-label="{{ header.navigation }}">
+					<a href="{{ homeUrl }}#about">{{ nav.about }}</a><a href="{{ homeUrl }}#skills">{{ nav.skills }}</a><a href="{{ homeUrl }}#progetti">{{ nav.projects }}</a><a
+						href="{{ homeUrl }}#cv">CV</a><a href="{{ servicesUrl }}"{{ servicesCurrent }}>{{ nav.services }}</a><a href="#contatti">{{ nav.contact }}</a>
+				</nav>
+				<span class="header-divider" aria-hidden="true"></span>
+				<div class="header-utilities">
+				<nav class="header-socials" aria-label="{{ header.socials }}">
+					<a href="https://www.linkedin.com/in/matte-cappe" target="_blank" rel="noopener noreferrer"
+						aria-label="LinkedIn"><span class="header-social-icon social-linkedin" aria-hidden="true"><svg
+								viewBox="0 0 24 24">
+								<rect class="linkedin-bg" x="1.5" y="1.5" width="21" height="21" rx="3.5" />
+								<path class="linkedin-glyph"
+									d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V8.99h3.42v1.57h.05c.47-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.37 4.27 5.46v6.28ZM5.32 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.54V8.99H7.1v11.46Z" />
+							</svg></span></a>
+				</nav>
+				<nav class="language-switcher" aria-label="{{ language.label }}">
+					<a href="{{ alternateUrl }}" lang="{{ alternateLang }}" hreflang="{{ alternateLang }}" aria-label="{{ alternateLabel }}" title="{{ alternateLabel }}" data-language-link><img src="{{ assetPrefix }}public/img/{{ alternateFlag }}" alt="" width="21" height="14" /></a>
+				</nav>
+				</div>
+			</div>
+		</header>

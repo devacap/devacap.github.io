@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="{{ lang }}">
+
+{{ head }}
+
+<body>
+	<div class="page-shell">
+{{ header }}
+
+		<main id="top">
+			<section class="hero" aria-labelledby="hero-title">
+				<div class="hero-copy">
+					<h1 id="hero-title"><strong>Matteo</strong><br /><span>Cappelli</span></h1>
+					<p class="hero-intro">{{ hero.intro }}</p>
+					<div class="hero-actions">
+						<a class="button button-primary" href="#progetti">{{ hero.projects }}</a>
+						<a class="text-link" href="#contatti">{{ contact.eyebrow }} <span aria-hidden="true">↗</span></a>
+					</div>
+				</div>
+				<div class="hero-visual" aria-hidden="true">
+					<div class="portrait-card">
+						<div class="portrait-mark">
+							<img class="hero-logo" src="{{ assetPrefix }}public/img/logo.svg" alt="" />
+						</div>
+						<p class="portrait-motto">{{ hero.care }} <span>•</span> {{ hero.simplicity }} <span>•</span> {{ hero.curiosity }}</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="about" class="about section-block reveal" aria-labelledby="about-title">
+				<div class="section-heading">
+					<h2 id="about-title">{{ about.title }}</h2>
+				</div>
+				<div class="about-grid">
+					<p class="about-lead">{{ about.lead }}</p>
+					<div class="about-copy">
+						<p>{{ about.intro }}</p>
+						<p>{{ about.experience }}</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="skills" class="skills section-block" aria-labelledby="skills-title">
+				<div class="section-heading reveal">
+					<div>
+						<h2 id="skills-title">{{ nav.skills }}</h2>
+					</div>
+				</div>
+				<div class="skills-intro reveal">
+					<p>{{ skills.intro }}</p>
+				</div>
+
+				<div class="skill-group skill-group-soft reveal">
+					<div class="skill-group-heading">
+						<div>
+							<h3>Soft skills</h3>
+						</div>
+					</div>
+					<div class="meter-grid">
+						<article class="skill-meter">
+							<div class="skill-ring soft-ring" style="--level: 100" role="img"
+								aria-label="{{ skills.problemSolvingLabel }}">
+								<div class="skill-core"><span class="soft-icon" aria-hidden="true"><svg
+											viewBox="0 0 24 24">
+											<path
+												d="M9 18h6M10 22h4M8.6 15.2a7 7 0 1 1 6.8 0c-.9.7-1.4 1.7-1.4 2.8h-4c0-1.1-.5-2.1-1.4-2.8Z" />
+											<path d="m9.4 10.5 1.7 1.7 3.6-3.8" />
+										</svg></span></div>
+							</div>
+							<h4>Problem solving</h4>
+						</article>
+						<article class="skill-meter">
+							<div class="skill-ring soft-ring" style="--level: 100" role="img"
+								aria-label="{{ skills.analysisLabel }}">
+								<div class="skill-core"><span class="soft-icon" aria-hidden="true"><svg
+											viewBox="0 0 24 24">
+											<circle cx="10" cy="10" r="6" />
+											<path d="m14.5 14.5 5 5M7.5 12v-2M10 12V7M12.5 12V9" />
+										</svg></span></div>
+							</div>
+							<h4>{{ skills.analysis }}</h4>
+						</article>
+						<article class="skill-meter">
+							<div class="skill-ring soft-ring" style="--level: 100" role="img"
+								aria-label="{{ skills.reliabilityLabel }}">
+								<div class="skill-core"><span class="soft-icon" aria-hidden="true"><svg
+											viewBox="0 0 24 24">
+											<path d="M12 3 5 6v5c0 4.6 2.9 8.1 7 10 4.1-1.9 7-5.4 7-10V6l-7-3Z" />
+											<path d="m8.8 11.8 2.1 2.1 4.5-4.6" />
+										</svg></span></div>
+							</div>
+							<h4>{{ skills.reliability }}</h4>
+						</article>
+						<article class="skill-meter">
+							<div class="skill-ring soft-ring" style="--level: 100" role="img"
+								aria-label="{{ skills.adaptabilityLabel }}">
+								<div class="skill-core"><span class="soft-icon" aria-hidden="true"><svg
+											viewBox="0 0 24 24">
+											<path
+												d="M4 12h4c4 0 4-6 8-6h4M16 3l4 3-4 3M8 12c4 0 4 6 8 6h4M16 15l4 3-4 3" />
+										</svg></span></div>
+							</div>
+							<h4>{{ skills.adaptability }}</h4>
+						</article>
+						<article class="skill-meter">
+							<div class="skill-ring soft-ring" style="--level: 100" role="img"
+								aria-label="{{ skills.communicationLabel }}">
+								<div class="skill-core"><span class="soft-icon" aria-hidden="true"><svg
+											viewBox="0 0 24 24">
+											<path
+												d="M4 5h11a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3H9l-4 3v-3H4a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3Z" />
+											<path d="M8 9h6M8 12h4" />
+										</svg></span></div>
+							</div>
+							<h4>{{ skills.communication }}</h4>
+						</article>
+						<article class="skill-meter">
+							<div class="skill-ring soft-ring" style="--level: 100" role="img"
+								aria-label="{{ skills.collaborationLabel }}">
+								<div class="skill-core"><span class="soft-icon" aria-hidden="true"><svg
+											viewBox="0 0 24 24">
+											<path d="m9.5 14.5-2 2a3.5 3.5 0 0 1-5-5l3-3a3.5 3.5 0 0 1 5 0" />
+											<path d="m14.5 9.5 2-2a3.5 3.5 0 0 1 5 5l-3 3a3.5 3.5 0 0 1-5 0M8 12h8" />
+										</svg></span></div>
+							</div>
+							<h4>{{ skills.collaboration }}</h4>
+						</article>
+					</div>
+				</div>
+
+				<div class="skill-group skill-group-hard reveal">
+				    <div class="skill-group-heading">
+				        <div>
+				            <h3>Hard skills</h3>
+				        </div>
+				    </div>
+
+				    <div class="meter-grid">
+
+				        <article class="skill-meter">
+				            <div class="skill-ring hard-ring"
+				                 style="--level: 100"
+				                 role="img"
+				                 aria-label="PHP">
+				                <div class="skill-core">
+				                    <span class="tech-logo tech-php">php</span>
+				                </div>
+				            </div>
+				            <h4>PHP</h4>
+				        </article>
+
+				        <article class="skill-meter">
+				            <div class="skill-ring hard-ring"
+				                 style="--level: 100"
+				                 role="img"
+				                 aria-label="Symfony">
+				                <div class="skill-core">
+				                    <span class="tech-logo tech-symfony">Sf</span>
+				                </div>
+				            </div>
+				            <h4>Symfony</h4>
+				        </article>
+
+				        <article class="skill-meter">
+				            <div class="skill-ring hard-ring"
+				                 style="--level: 100"
+				                 role="img"
+				                 aria-label="Git">
+				                <div class="skill-core">
+				                    <span class="tech-logo tech-git">git</span>
+				                </div>
+				            </div>
+				            <h4>GIT</h4>
+				        </article>
+
+				        <article class="skill-meter">
+				            <div class="skill-ring hard-ring"
+				                 style="--level: 100"
+				                 role="img"
+				                 aria-label="{{ skills.webLabel }}">
+				                <div class="skill-core">
+				                    <span class="tech-logo tech-js">JS</span>
+				                </div>
+				            </div>
+				            <h4>HTML · JS · CSS</h4>
+				        </article>
+
+				        <article class="skill-meter">
+				            <div class="skill-ring hard-ring"
+				                 style="--level: 100"
+				                 role="img"
+				                 aria-label="Linux">
+				                <div class="skill-core">
+				                    <span class="tech-logo tech-linux" aria-hidden="true">
+				                        <svg viewBox="0 0 48 48">
+				                            <rect x="5" y="7"
+				                                  width="38" height="34" rx="5" />
+				                            <path class="terminal-divider"
+				                                  d="M5 16h38" />
+				                            <circle cx="11" cy="11.5" r="1.25" />
+				                            <circle cx="15" cy="11.5" r="1.25" />
+				                            <path class="terminal-command"
+				                                  d="m12 23 6 5-6 5M23 33h11" />
+				                        </svg>
+				                    </span>
+				                </div>
+				            </div>
+				            <h4>Linux</h4>
+				        </article>
+
+				        <article class="skill-meter">
+				            <div class="skill-ring hard-ring"
+				                 style="--level: 100"
+				                 role="img"
+				                 aria-label="SQL">
+				                <div class="skill-core">
+				                    <span class="tech-logo tech-sql">SQL</span>
+				                </div>
+				            </div>
+				            <h4>SQL</h4>
+				        </article>
+
+				    </div>
+				</div>
+			</section>
+
+			<section id="progetti" class="projects section-block" aria-labelledby="projects-title">
+				<div class="section-heading reveal">
+					<div>
+						<p class="eyebrow">{{ projects.eyebrow }}</p>
+						<h2 id="projects-title">{{ nav.projects }}</h2>
+					</div>
+				</div>
+				<div class="project-overview reveal">
+					<p class="project-disclaimer">{{ projects.disclaimer }}</p>
+				</div>
+
+				<div class="project-carousel" data-project-carousel
+					role="group" aria-roledescription="{{ projects.carouselRole }}" aria-label="{{ nav.projects }}"
+					data-carousel-range="{{ projects.range }}" data-carousel-single="{{ projects.single }}">
+					<div id="project-track" class="micro-grid" data-carousel-track tabindex="0" aria-label="{{ projects.browse }}">
+						<article class="micro-card" data-project="vialenta" id="project-vialenta" aria-labelledby="project-vialenta-title">
+							<figure class="micro-media">
+								<img src="{{ assetPrefix }}public/img/project-vialenta.webp" alt="{{ vialenta.alt }}" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">Travel · Web platform</p>
+								<h3 id="project-vialenta-title">Vialenta</h3>
+								<p>{{ vialenta.description }}</p>
+								<p class="micro-value"><span>{{ projects.contribution }}</span>{{ vialenta.contribution }}</p>
+								<ul aria-label="{{ projects.technologies }}">
+									<li>Symfony</li>
+									<li>HTML, JS, CSS</li>
+									<li>SEO</li>
+									<li>Analytics</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="tourpilot" id="project-tourpilot" aria-labelledby="project-tourpilot-title">
+							<figure class="micro-media">
+								<img src="{{ assetPrefix }}public/img/project-tourpilot.webp" alt="{{ tourpilot.alt }}" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">Travel · Operations</p>
+								<h3 id="project-tourpilot-title">TourPilot</h3>
+								<p>{{ tourpilot.description }}</p>
+								<p class="micro-value"><span>{{ projects.contribution }}</span>{{ tourpilot.contribution }}</p>
+								<ul aria-label="{{ projects.technologies }}">
+									<li>Symfony</li>
+									<li>HTML, JS, CSS</li>
+									<li>API</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="stockroom" id="project-stockroom" aria-labelledby="project-stockroom-title">
+							<figure class="micro-media">
+								<img src="{{ assetPrefix }}public/img/project-stockroom.webp" alt="{{ stockroom.alt }}" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">Commerce</p>
+								<h3 id="project-stockroom-title">Stockroom</h3>
+								<p>{{ stockroom.description }}</p>
+								<p class="micro-value"><span>{{ projects.contribution }}</span>{{ stockroom.contribution }}</p>
+								<ul aria-label="{{ projects.technologies }}">
+									<li>Symfony</li>
+									<li>API</li>
+									<li>DDD</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="bridgebase" id="project-bridgebase" aria-labelledby="project-bridgebase-title">
+							<figure class="micro-media">
+								<img src="{{ assetPrefix }}public/img/project-nodo.webp" alt="{{ bridgebase.alt }}" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">Middleware · Integration</p>
+								<h3 id="project-bridgebase-title">BridgeBase</h3>
+								<p>{{ bridgebase.description }}</p>
+								<p class="micro-value"><span>{{ projects.contribution }}</span>{{ bridgebase.contribution }}</p>
+								<ul aria-label="{{ projects.technologies }}">
+									<li>Symfony</li>
+									<li>API</li>
+									<li>E-commerce</li>
+									<li>PrestaShop</li>
+									<li>Shopify</li>
+									<li>WordPress, WooCommerce</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="margine" id="project-margine" aria-labelledby="project-margine-title">
+							<figure class="micro-media">
+								<img src="{{ assetPrefix }}public/img/project-margine.webp" alt="{{ margine.alt }}" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">Finance · Business intelligence</p>
+								<h3 id="project-margine-title">Margine</h3>
+								<p>{{ margine.description }}</p>
+								<p class="micro-value"><span>{{ projects.contribution }}</span>{{ margine.contribution }}</p>
+								<ul aria-label="{{ projects.technologies }}">
+									<li>Symfony</li>
+									<li>Reporting</li>
+									<li>{{ margine.imports }}</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="quota" id="project-quota" aria-labelledby="project-quota-title">
+							<figure class="micro-media">
+								<img src="{{ assetPrefix }}public/img/project-quota.webp" alt="{{ quota.alt }}" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">Fintech · Investments</p>
+								<h3 id="project-quota-title">Quota</h3>
+								<p>{{ quota.description }}</p>
+								<p class="micro-value"><span>{{ projects.contribution }}</span>{{ quota.contribution }}</p>
+								<ul aria-label="{{ projects.technologies }}">
+									<li>Symfony</li>
+									<li>Calculations</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="skillario" id="project-skillario" aria-labelledby="project-skillario-title">
+							<figure class="micro-media">
+								<img src="{{ assetPrefix }}public/img/project-skillario.webp" alt="{{ skillario.alt }}" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">E-Learning</p>
+								<h3 id="project-skillario-title">Skillario</h3>
+								<p>{{ skillario.description }}</p>
+								<p class="micro-value"><span>{{ projects.contribution }}</span>{{ skillario.contribution }}</p>
+								<ul aria-label="{{ projects.technologies }}">
+									<li>Symfony</li>
+									<li>HTML, JS, CSS</li>
+									<li>API</li>
+									<li>Reporting</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="flotta" id="project-flotta" aria-labelledby="project-flotta-title">
+							<figure class="micro-media">
+								<img src="{{ assetPrefix }}public/img/project-flotta.webp" alt="{{ flotta.alt }}" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">Mobility · Operations</p>
+								<h3 id="project-flotta-title">Flotta</h3>
+								<p>{{ flotta.description }}</p>
+								<p class="micro-value"><span>{{ projects.contribution }}</span>{{ flotta.contribution }}</p>
+								<ul aria-label="{{ projects.technologies }}">
+									<li>Symfony</li>
+									<li>API</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="gofood" id="project-gofood" aria-labelledby="project-gofood-title">
+							<figure class="micro-media">
+								<img src="{{ assetPrefix }}public/img/project-fornogo.webp" alt="{{ gofood.alt }}" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">Food commerce · Delivery</p>
+								<h3 id="project-gofood-title">GoFood</h3>
+								<p>{{ gofood.description }}</p>
+								<p class="micro-value"><span>{{ projects.contribution }}</span>{{ gofood.contribution }}</p>
+								<ul aria-label="{{ projects.technologies }}">
+									<li>Symfony</li>
+									<li>React</li>
+									<li>API</li>
+									<li>E-commerce</li>
+									<li>Scheduling</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="deskline" id="project-deskline" aria-labelledby="project-deskline-title">
+							<figure class="micro-media">
+								<img src="{{ assetPrefix }}public/img/project-deskline.webp" alt="{{ deskline.alt }}" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">Management · Energy</p>
+								<h3 id="project-deskline-title">Deskline</h3>
+								<p>{{ deskline.description }}</p>
+								<p class="micro-value"><span>{{ projects.contribution }}</span>{{ deskline.contribution }}</p>
+								<ul aria-label="{{ projects.technologies }}">
+									<li>Symfony</li>
+									<li>HTML, JS, CSS</li>
+									<li>Chat</li>
+									<li>Charts</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="mineralandia" id="project-mineralandia" aria-labelledby="project-mineralandia-title">
+							<figure class="micro-media">
+								<img src="{{ assetPrefix }}public/img/project-mineralia.webp" alt="{{ mineralandia.alt }}" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">Vertical SaaS · Catalog</p>
+								<h3 id="project-mineralandia-title">Mineralandia</h3>
+								<p>{{ mineralandia.description }}</p>
+								<p class="micro-value"><span>{{ projects.contribution }}</span>{{ mineralandia.contribution }}</p>
+								<ul aria-label="{{ projects.technologies }}">
+									<li>Symfony</li>
+									<li>Reporting</li>
+								</ul>
+							</div>
+						</article>
+						<article class="micro-card" data-project="elica" id="project-elica" aria-labelledby="project-elica-title">
+							<figure class="micro-media">
+								<img class="image-focus-top" src="{{ assetPrefix }}public/img/project-elica.webp" alt="{{ elica.alt }}" loading="lazy" />
+							</figure>
+							<div class="micro-body">
+								<p class="micro-meta">E-commerce · Energy</p>
+								<h3 id="project-elica-title">Elica</h3>
+								<p>{{ elica.description }}</p>
+								<p class="micro-value"><span>{{ projects.contribution }}</span>{{ elica.contribution }}</p>
+								<ul aria-label="{{ projects.technologies }}">
+									<li>Symfony</li>
+									<li>HTML, JS, CSS</li>
+								</ul>
+							</div>
+						</article>
+					</div>
+					<div class="project-carousel-controls" data-carousel-controls hidden>
+						<div class="project-carousel-pages" data-carousel-pages role="group" aria-label="{{ projects.pages }}"></div>
+						<div class="project-carousel-navigation">
+							<p class="project-carousel-status" data-carousel-status role="status" aria-live="polite" aria-atomic="true"></p>
+							<button class="project-carousel-arrow" type="button" data-carousel-prev aria-controls="project-track" aria-label="{{ projects.previous }}">
+								<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6" /></svg>
+							</button>
+							<button class="project-carousel-arrow" type="button" data-carousel-next aria-controls="project-track" aria-label="{{ projects.next }}">
+								<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6" /></svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="cv" class="cv section-block reveal" aria-labelledby="cv-title">
+				<div class="cv-top">
+					<div class="cv-copy">
+						<p class="eyebrow">{{ cv.eyebrow }}</p>
+						<h2 id="cv-title">{{ cv.titleFirst }}<br />{{ cv.titleSecond }}</h2>
+						<p>{{ cv.intro }}</p>
+					</div>
+				</div>
+				<div class="cv-path">
+					<article><span>{{ cv.today }}</span>
+						<div>
+							<h3>{{ cv.fullstack }}</h3>
+							<p>{{ cv.fullstackDescription }}</p>
+						</div>
+					</article>
+					<article><span>Focus</span>
+						<div>
+							<h3>{{ cv.business }}</h3>
+							<p>{{ cv.businessDescription }}</p>
+						</div>
+					</article>
+					<article><span>{{ cv.method }}</span>
+						<div>
+							<h3>{{ cv.methodTitle }}</h3>
+							<p>{{ cv.methodDescription }}</p>
+						</div>
+					</article>
+				</div>
+				<div class="cv-download">
+					<div class="cv-download-copy">
+						<p class="eyebrow">Download CV</p>
+						<h3>{{ cv.downloadFirst }}<br />{{ cv.downloadSecond }}</h3>
+					</div>
+					<div class="cv-actions">
+						<a class="button" href="{{ assetPrefix }}public/files/MATTEO CAPPELLI CV.pdf" target="_blank" download><span>{{ cv.italian }}</span><strong>{{ cv.download }}</strong></a>
+						<a class="button" href="{{ assetPrefix }}public/files/MATTEO CAPPELLI CV EN.pdf" target="_blank"
+							download><span>{{ cv.english }}</span><strong>Download ↓</strong></a>
+					</div>
+				</div>
+			</section>
+
+{{ contact }}
+		</main>
+
+{{ footer }}
+	</div>
+</body>
+</html>

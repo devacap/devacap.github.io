@@ -16,7 +16,7 @@ window.addEventListener("scroll", updateHeader, { passive: true });
 
 window.addEventListener("load", () => {
 	const target = window.location.hash
-		? document.querySelector(window.location.hash)
+		? document.getElementById(window.location.hash.slice(1))
 		: null;
 
 	if (target) {
@@ -25,6 +25,19 @@ window.addEventListener("load", () => {
 		document.documentElement.style.scrollBehavior = "";
 	}
 });
+
+// Keep the current section when following a language link. The links also work
+// without JavaScript, and relative URLs support local previews and subdirectories.
+const languageLinks = document.querySelectorAll("[data-language-link]");
+const updateLanguageLinks = () => {
+	languageLinks.forEach((link) => {
+		const url = new URL(link.href, window.location.href);
+		url.hash = window.location.hash;
+		link.href = url.href;
+	});
+};
+updateLanguageLinks();
+window.addEventListener("hashchange", updateLanguageLinks);
 
 menuToggle.addEventListener("click", () => {
 	const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
@@ -41,17 +54,18 @@ navigation.querySelectorAll("a").forEach((link) => {
 
 const contactForm = document.querySelector("[data-contact-form]");
 const formStatus = document.querySelector("[data-form-status]");
+const messages = contactForm.dataset;
 
 contactForm.addEventListener("submit", async (event) => {
 	event.preventDefault();
 
 	if (!contactForm.checkValidity()) {
 		contactForm.reportValidity();
-		formStatus.textContent = "Completa i campi richiesti per continuare.";
+		formStatus.textContent = messages.messageRequired;
 		return;
 	}
 
-	formStatus.textContent = "Invio in corso...";
+	formStatus.textContent = messages.messageSending;
 
 	try {
 		const response = await fetch(contactForm.action, {
@@ -64,13 +78,13 @@ contactForm.addEventListener("submit", async (event) => {
 
 		const json = await response.json();
 
-		if (response.status === 200) {
-			formStatus.textContent = "Grazie! La tua richiesta è stata inviata.";
+		if (response.ok && json.success) {
+			formStatus.textContent = messages.messageSuccess;
 			contactForm.reset();
 		} else {
-			formStatus.textContent = json.message || "Ops! C'è stato un problema. Riprova.";
+			formStatus.textContent = messages.messageError;
 		}
 	} catch (error) {
-		formStatus.textContent = "Errore di connessione. Controlla la rete e riprova.";
+		formStatus.textContent = messages.messageNetwork;
 	}
 });
